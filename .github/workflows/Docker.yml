@@ -1,1 +1,16 @@
 
+name: Docker
+
+on:
+  workflow_call: #vai ser executada quando for chamada pro outra rotina no workflow 
+
+
+jobs:
+
+  docker:
+    runs-on: ubuntu-latest #escolhe qual vai ser o sistema base que vai rodar os comandos 
+    steps:
+    - uses: actions/checkout@v3 #se precisa usar arquivos que estão no diretorio do github
+
+    - name: Setup Docker Build
+      uses: docker/setup-buildx-action@v2.5.0
