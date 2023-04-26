@@ -14,3 +14,10 @@ jobs:
 
     - name: Setup Docker Build
       uses: docker/setup-buildx-action@v2.5.0
+      
+    - name: Docker Login
+      uses: docker/login-action@v2.1.0
+      with:
+        username: Nivlek2012
+        password:
+      
