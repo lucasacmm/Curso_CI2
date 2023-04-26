@@ -52,3 +52,4 @@ jobs:
   docker:
     needs: build
     uses: ./.github/workflows/Docker.yml
+    secrets: inherit #permitir que o go.yml utilise o secrets que esta no Docker.yml
